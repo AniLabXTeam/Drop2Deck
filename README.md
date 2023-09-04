@@ -8,7 +8,7 @@ Q: *How the heck I can send files to my Steam Deck easily without headache?*
 A: *Drop2Deck!*
 
 <p align="center">
-  <img src="images/ui.png" width="500" alt="ui"><img src="images/start.png" width="500" alt="ui">
+  <img src="images/ui.png" width="400" alt="UI"><img src="images/start.png" width="400" alt="Start">
 </p>
 
 ### What it this?
