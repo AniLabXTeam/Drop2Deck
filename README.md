@@ -83,7 +83,7 @@ If you change `FTP Username` and want to delete old user, you will need to delet
 
 App is cross-platform and can be launched in `MacOS` on regular `JDK 17+` with `JavaFX 20 SDK`, but it is designed to work as `Native app` that can be produced with `GraalVM Native image`. That neat feature requires some configuration before use  
 
-There is no that configuration and build for `MacOS`. But you can make it. Refer to 'GraalVM Native Image' docs for info
+There is no that configuration and build for `MacOS`. But you can make it. Refer to `GraalVM Native Image` docs for info
 
 ## Building
 
