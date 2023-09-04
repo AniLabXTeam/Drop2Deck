@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+export JAVA_HOME={path_to_graalvm}
+export GRAALVM_HOME={path_to_graalvm}
+export USE_NATIVE_IMAGE_JAVA_PLATFORM_MODULE_SYSTEM=false
+
+./gradlew nativeBuild
