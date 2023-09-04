@@ -33,17 +33,17 @@ Additional libs are not required, but make sure to mark file as executable befor
 
 ### How to install and launch
 
-Just download latest binary file for your system from [Release](https://github.com/CrazyXacker/Drop2Deck/releases) section, put it in desired location and launch as normal app. After that you will see apps GUI
+Just download latest binary file for your system from [Release](https://github.com/CrazyXacker/Drop2Deck/releases) section, put it in desired location and launch as normal app. After that you will see app UI
 
 ### How to configure
 
-Apps GUI is very simple and consist of few configuration fields and `Start`/`Stop` button
+App UI is very simple and consist of few configuration fields and `Start`/`Stop` button
 
 *Note: default settings with `deck` username, `deck` password and `9001`/`9002` ports should be fine for almost all users*
 
 Fields:  
 `Username`: define `username` that you will use to connect  
-`Password`: define `password` that you will use to connect
+`Password`: define `password` that you will use to connect  
 `Port (Internal memory)`: define internal memory `port` that you will use to connect  
 `Port (External memory)`: define external memory `port` that you will use to connect
 
@@ -81,9 +81,9 @@ If you change `FTP Username` and want to delete old user, you will need to delet
 
 #### Build for MacOS
 
-App is cross-platform and can be launched in `MacOS` on plain `JDK` with `JavaFX SDK`, but it is designed to work as `Native app` that can be produced wit `GraalVM Native image`. Еhat neat feature requires some configuration before use  
+App is cross-platform and can be launched in `MacOS` on regular `JDK 17+` with `JavaFX 20 SDK`, but it is designed to work as `Native app` that can be produced with `GraalVM Native image`. That neat feature requires some configuration before use  
 
-There is no that configuration and build for `MacOS`. But you can make it. Head into `Building` section 
+There is no that configuration and build for `MacOS`. But you can make it. Refer to 'GraalVM Native Image' docs for info
 
 ## Building
 
@@ -91,9 +91,9 @@ There is no that configuration and build for `MacOS`. But you can make it. Head 
 
 ### Build JAR file
 
-Execute ```gradlew shadowJar``` task. This task will produce `fat` jar that can be launched with any `JRE 17+` with no additional dependencies
+Execute ```gradlew shadowJar``` task. This task will produce `fat` jar that can be launched with any `JRE/JDK 17+` with no additional dependencies
 
-*Note: is designed to work as `Native app` without any installed `JRE`*
+*Note: is designed to work as `Native app` without any installed `JRE/JDK`*
 
 ### Build GraalVM Native Image
 
@@ -113,7 +113,7 @@ Follow [Linux instructions](https://www.graalvm.org/latest/docs/getting-started/
 
 #### Windows
 
-Execute ```gradlew nativeBuild nativeRun``` task. After success, binary file will be in `\build\gluonfx\x86_64-windows` folder
+Execute ```gradlew nativeBuild``` task. After success, binary file will be in `\build\gluonfx\x86_64-windows` folder
 
 #### Linux
 
