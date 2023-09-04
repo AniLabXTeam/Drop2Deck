@@ -1,0 +1,113 @@
+import org.gradle.nativeplatform.platform.internal.DefaultNativePlatform
+
+buildscript {
+    repositories {
+        maven { url "https://nexus.gluonhq.com/nexus/content/repositories/releases" }
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+    dependencies {
+        classpath "gradle.plugin.com.github.johnrengelman:shadow:7.1.2"
+        classpath 'org.openjfx:javafx-plugin:0.0.14'
+        classpath 'com.gluonhq:gluonfx-gradle-plugin:1.0.19'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'idea'
+
+apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'org.openjfx.javafxplugin'
+apply plugin: 'com.gluonhq.gluonfx-gradle-plugin'
+
+applicationName = 'DeckDrop'
+group = 'com.crazyxacker.apps'
+mainClassName = 'com.crazyxacker.apps.drop2deck.FXRunner'
+version = '1.0'
+
+compileJava.options.encoding = 'UTF-8'
+System.setProperty('file.encoding', 'UTF-8')
+
+repositories {
+    mavenCentral()
+}
+
+OperatingSystem os = DefaultNativePlatform.currentOperatingSystem
+gluonfx {
+    appIdentifier = applicationName
+
+    if (os.isWindows()) {
+        graalvmHome = GRAALVM_WINDOWS_HOME
+    } else if (os.isLinux()) {
+        graalvmHome = GRAALVM_LINUX_HOME
+    } else if (os.isMacOsX()) {
+        graalvmHome = GRAALVM_MACOSX_HOME
+    }
+}
+
+nativeBuild {
+    applicationDefaultJvmArgs = [
+            "-Djava.home=" + gluonfx.graalvmHome,
+            "-Djava.awt.headless=true",
+            "-Dfile.encoding=UTF-8",
+            "-H:+AllowIncompleteClasspath",
+            "-H:-IncludeMethodsData",
+            "--no-fallback",
+            "--enable-http",
+            "--enable-https",
+            "--allow-incomplete-classpath",
+            "--static"
+    ]
+}
+
+javafx {
+    version = '20'
+    modules = ['javafx.base', 'javafx.controls', 'javafx.fxml', 'javafx.graphics']
+}
+
+dependencies {
+    // SubstrateVM features
+    compileOnly 'org.graalvm.nativeimage:svm:22.1.0'
+
+    // SLF4j logging
+    implementation 'org.slf4j:slf4j-api:2.0.7'
+    implementation 'org.slf4j:slf4j-simple:2.0.7'
+
+    // JNA
+    implementation 'net.java.dev.jna:jna:5.13.0'
+    implementation 'net.java.dev.jna:jna-platform:5.13.0'
+
+    // Apache Mina
+    implementation 'org.apache.mina:mina-core:2.2.2'
+
+    // Apache FTP
+    implementation 'org.apache.ftpserver:ftplet-api:1.2.0'
+    implementation 'org.apache.ftpserver:ftpserver-core:1.2.0'
+
+    // JavaFX
+    implementation 'com.jfoenix:jfoenix:9.0.10'
+
+    // Ikonli
+    implementation 'org.kordamp.ikonli:ikonli-javafx:12.3.1'
+    implementation 'org.kordamp.ikonli:ikonli-materialdesign2-pack:12.3.1'
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': applicationName,
+                'Implementation-Version': version,
+                'Main-Class': mainClassName,
+                'Built-By': 'CrazyXacker'
+    }
+}
+
+run {
+    new File(project.buildDir, "/resources/main/config.properties").delete()
+    List<String> args = new ArrayList<String>() {{
+        add("--add-exports=javafx.graphics/com.sun.javafx.scene=ALL-UNNAMED");
+        add("--add-opens=javafx.graphics/com.sun.javafx.scene=ALL-UNNAMED");
+    }}
+
+    applicationDefaultJvmArgs = args
+    jvmArgs = args
+}

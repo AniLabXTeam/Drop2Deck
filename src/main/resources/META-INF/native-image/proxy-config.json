@@ -1,0 +1,8 @@
+[
+  {
+    "interfaces":["com.crazyxacker.apps.drop2deck.jna.StageOps$DwmSupport"]}
+,
+  {
+    "interfaces":["com.sun.jna.platform.win32.User32"]}
+
+]

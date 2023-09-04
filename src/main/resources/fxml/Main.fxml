@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.crazyxacker.apps.drop2deck.layout.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<StackPane fx:id="root" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crazyxacker.apps.drop2deck.controller.MainController">
+    <BorderPane>
+        <bottom>
+            <JFXButton fx:id="btnStartStop" contentDisplay="CENTER" onAction="#startStopServer" prefHeight="80.0" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-radius: 60; -fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: #0b82fb;" text=" " textAlignment="CENTER" BorderPane.alignment="CENTER">
+                <graphic>
+                    <ImageView fx:id="ivStartStop" fitHeight="48.0" fitWidth="48.0">
+                        <image>
+                            <Image url="@../icons/round_play_circle_48.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+                <BorderPane.margin>
+                    <Insets bottom="32.0" left="32.0" right="32.0" top="32.0" />
+                </BorderPane.margin>
+            </JFXButton>
+        </bottom>
+        <top>
+            <ImageView fitHeight="100.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                <image>
+                    <Image url="@../logo.png" />
+                </image>
+                <BorderPane.margin>
+                    <Insets bottom="12.0" left="12.0" right="12.0" top="24.0" />
+                </BorderPane.margin>
+            </ImageView>
+        </top>
+        <center>
+            <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+                <VBox fx:id="vbConfig" alignment="CENTER" maxWidth="1.7976931348623157E308" spacing="40.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <InputGroup maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-scale-x: 1.75; -fx-scale-y: 1.75;">
+                            <children>
+                                <Button fx:id="btnUsername" styleClass="button-icon">
+                                    <graphic>
+                                        <FontIcon iconLiteral="mdi2a-account" iconSize="20" />
+                                    </graphic>
+                                </Button>
+                                <TextField fx:id="tfUsername" maxWidth="180.0" prefWidth="180.0" promptText="Username" />
+                            </children>
+                        </InputGroup>
+                        <InputGroup maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-scale-x: 1.75; -fx-scale-y: 1.75;">
+                            <children>
+                                <Button fx:id="btnPassword" styleClass="button-icon">
+                                    <graphic>
+                                        <FontIcon iconLiteral="mdi2k-key" iconSize="20" />
+                                    </graphic>
+                                </Button>
+                                <PasswordField fx:id="tfPassword" maxWidth="150.0" prefWidth="150.0" promptText="Password" />
+                                <Button fx:id="btnShowHidePassword" styleClass="button-icon">
+                                    <graphic>
+                                        <FontIcon fx:id="fiShowHidePassword" iconLiteral="mdi2e-eye" iconSize="20" />
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </InputGroup>
+                        <HBox alignment="CENTER" spacing="90.0">
+                            <InputGroup style="-fx-scale-x: 1.75; -fx-scale-y: 1.75;" GridPane.rowIndex="1">
+                                <children>
+                                    <Button fx:id="btnInternalMemory" styleClass="button-icon">
+                                        <graphic>
+                                            <FontIcon iconLiteral="mdi2c-chip" iconSize="20" />
+                                        </graphic>
+                                    </Button>
+                                    <TextField fx:id="tfPortInternal" maxWidth="70.0" promptText="Port (Internal memory)" />
+                                </children>
+                            </InputGroup>
+
+                            <InputGroup style="-fx-scale-x: 1.75; -fx-scale-y: 1.75;" GridPane.rowIndex="1">
+                                <children>
+                                    <Button fx:id="btnExternalMemory" styleClass="button-icon">
+                                        <graphic>
+                                            <FontIcon iconLiteral="mdi2m-micro-sd" iconSize="20" />
+                                        </graphic>
+                                    </Button>
+                                    <TextField fx:id="tfPortExternal" maxWidth="70.0" promptText="Port (External memory)" />
+                                </children>
+                            </InputGroup>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                    </padding>
+                </VBox>
+                <GridPane fx:id="gpDetails">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="500.0" minHeight="350.0" prefHeight="350.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="40.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="60.0" vgrow="ALWAYS" />
+                    </rowConstraints>
+                    <children>
+                        <StackPane maxHeight="300.0" maxWidth="300.0" style="-fx-border-color: gray; -fx-border-width: 2; -fx-border-radius: 12;">
+                            <children>
+                                <JFXSpinner maxHeight="30.0" maxWidth="30.0" prefHeight="30.0" prefWidth="30.0" StackPane.alignment="CENTER" />
+                                <ImageView fx:id="ivQRInternal" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </StackPane>
+                        <InputGroup maxWidth="280.0" style="-fx-scale-x: 1.75; -fx-scale-y: 1.75;" GridPane.rowIndex="1">
+                            <children>
+                                <TextField fx:id="tfInternalUrl" minHeight="26.0" prefWidth="250.0" />
+                                <Button fx:id="btnCopyInternal" onAction="#copyInternalUrl" styleClass="button-icon">
+                                    <graphic>
+                                        <FontIcon iconLiteral="mdi2c-content-copy" iconSize="20" />
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </InputGroup>
+                        <StackPane maxHeight="300.0" maxWidth="300.0" style="-fx-border-color: gray; -fx-border-width: 2; -fx-border-radius: 12;" GridPane.columnIndex="1">
+                            <children>
+                                <JFXSpinner maxHeight="30.0" maxWidth="30.0" prefHeight="30.0" prefWidth="30.0" />
+                                <ImageView fx:id="ivQRExternal" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </StackPane>
+                        <InputGroup layoutX="230.0" layoutY="339.0" maxWidth="280.0" style="-fx-scale-x: 1.75; -fx-scale-y: 1.75;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <children>
+                                <TextField fx:id="tfExternalUrl" minHeight="26.0" prefWidth="250.0" />
+                                <Button fx:id="btnCopyExternal" onAction="#copyExternalUrl" styleClass="button-icon">
+                                    <graphic>
+                                        <FontIcon iconLiteral="mdi2c-content-copy" iconSize="20" />
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </InputGroup>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                            <children>
+                                <FontIcon iconLiteral="mdi2c-chip" iconSize="26" scaleX="2.0" scaleY="2.0" />
+                                <Label fx:id="lblInternalLogs" alignment="CENTER" minWidth="300.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="No data transfer..." />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="400.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <children>
+                                <FontIcon iconLiteral="mdi2m-micro-sd" iconSize="26" scaleX="2.0" scaleY="2.0" />
+                                <Label fx:id="lblExternalLogs" alignment="CENTER" minWidth="300.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="No data transfer..." />
+                            </children>
+                        </HBox>
+                    </children>
+                </GridPane>
+            </VBox>
+        </center>
+    </BorderPane>
+    <JFXButton contentDisplay="CENTER" mnemonicParsing="false" onAction="#showGit" text=" " StackPane.alignment="TOP_LEFT">
+        <graphic>
+            <FontIcon iconLiteral="mdi2g-git" iconSize="20" />
+        </graphic>
+        <StackPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        </StackPane.margin>
+    </JFXButton>
+   <JFXButton contentDisplay="CENTER" mnemonicParsing="false" onAction="#exit" text=" " StackPane.alignment="TOP_RIGHT">
+       <graphic>
+           <FontIcon iconLiteral="mdi2e-exit-run" iconSize="20" />
+       </graphic>
+      <StackPane.margin>
+         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </StackPane.margin>
+   </JFXButton>
+</StackPane>
