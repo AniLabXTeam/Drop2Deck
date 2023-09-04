@@ -21,7 +21,7 @@ You even can add app into `Gaming Mode` on your `Steam Deck` and transfer files 
 
 ### Prerequisites
 
-*Note: app will work only on `x86_64` systems!*
+*Note: `binary` version of app will work only on `x86_64` systems! `JAR` version works everywhere*
 
 #### Windows
 
