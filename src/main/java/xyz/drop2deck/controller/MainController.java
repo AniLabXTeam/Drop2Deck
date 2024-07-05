@@ -1,13 +1,13 @@
-package com.crazyxacker.apps.drop2deck.controller;
+package xyz.drop2deck.controller;
 
-import com.crazyxacker.apps.drop2deck.FXApplication;
-import com.crazyxacker.apps.drop2deck.enums.Platform;
-import com.crazyxacker.apps.drop2deck.ftp.FTPServer;
-import com.crazyxacker.apps.drop2deck.network.StorLoggingFtplet;
-import com.crazyxacker.apps.drop2deck.skin.VisiblePasswordFieldSkin;
-import com.crazyxacker.apps.drop2deck.util.FXUtils;
-import com.crazyxacker.apps.drop2deck.util.NetworkUtils;
-import com.crazyxacker.apps.drop2deck.util.QRCodeUtils;
+import xyz.drop2deck.FXApplication;
+import xyz.drop2deck.enums.Platform;
+import xyz.drop2deck.ftp.FTPServer;
+import xyz.drop2deck.network.StorLoggingFtplet;
+import xyz.drop2deck.skin.VisiblePasswordFieldSkin;
+import xyz.drop2deck.util.FXUtils;
+import xyz.drop2deck.util.NetworkUtils;
+import xyz.drop2deck.util.QRCodeUtils;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
@@ -33,7 +33,7 @@ import java.util.HashMap;
 import java.util.Optional;
 import java.util.function.Function;
 
-import static com.crazyxacker.apps.drop2deck.FXApplication.PREFERENCES;
+import static xyz.drop2deck.FXApplication.PREFERENCES;
 
 public class MainController {
     private static final String DEFAULT_BUTTON_STYLE = "-fx-background-radius: 60; -fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: ";

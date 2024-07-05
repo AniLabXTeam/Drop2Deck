@@ -1,4 +1,4 @@
-package com.crazyxacker.apps.drop2deck.network;
+package xyz.drop2deck.network;
 
 import org.apache.ftpserver.ftplet.FtpReply;
 import org.apache.ftpserver.ftplet.FtpRequest;

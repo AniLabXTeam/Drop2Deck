@@ -47,3 +47,5 @@ gradle.properties
 tools/
 
 users.properties
+
+buildLinux.sh

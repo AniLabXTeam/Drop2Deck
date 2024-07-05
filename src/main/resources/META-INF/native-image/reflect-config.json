@@ -9,11 +9,11 @@
   "name":"[Lsun.security.pkcs.SignerInfo;"
 },
 {
-  "name":"com.crazyxacker.apps.drop2deck.FXApplication",
+  "name":"xyz.drop2deck.FXApplication",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
   {
-    "name":"com.crazyxacker.apps.drop2deck.controller.MainController",
+    "name":"xyz.drop2deck.controller.MainController",
     "allDeclaredFields":true,
     "queryAllDeclaredMethods":true,
     "methods":[
@@ -27,7 +27,7 @@
     ]
   },
 {
-  "name":"com.crazyxacker.apps.drop2deck.layout.InputGroup",
+  "name":"xyz.drop2deck.layout.InputGroup",
   "queryAllDeclaredMethods":true,
   "queryAllPublicConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]

@@ -1,6 +1,6 @@
-package com.crazyxacker.apps.drop2deck.util;
+package xyz.drop2deck.util;
 
-import com.crazyxacker.apps.drop2deck.enums.Platform;
+import xyz.drop2deck.enums.Platform;
 import org.graalvm.nativeimage.ImageInfo;
 import org.graalvm.nativeimage.ImageSingletons;
 

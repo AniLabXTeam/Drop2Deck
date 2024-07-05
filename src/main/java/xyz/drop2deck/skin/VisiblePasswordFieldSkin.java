@@ -1,4 +1,4 @@
-package com.crazyxacker.apps.drop2deck.skin;
+package xyz.drop2deck.skin;
 
 import javafx.scene.Cursor;
 import javafx.scene.control.Button;

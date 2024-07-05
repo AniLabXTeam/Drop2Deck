@@ -7,8 +7,8 @@ buildscript {
     }
     dependencies {
         classpath "gradle.plugin.com.github.johnrengelman:shadow:7.1.2"
-        classpath 'org.openjfx:javafx-plugin:0.0.14'
-        classpath 'com.gluonhq:gluonfx-gradle-plugin:1.0.19'
+        classpath 'org.openjfx:javafx-plugin:0.1.0'
+        classpath 'com.gluonhq:gluonfx-gradle-plugin:1.0.22'
     }
 }
 
@@ -21,9 +21,9 @@ apply plugin: 'org.openjfx.javafxplugin'
 apply plugin: 'com.gluonhq.gluonfx-gradle-plugin'
 
 applicationName = 'DeckDrop'
-group = 'com.crazyxacker.apps'
-mainClassName = 'com.crazyxacker.apps.drop2deck.FXRunner'
-version = '1.0'
+group = 'xyz.drop2deck'
+mainClassName = 'xyz.drop2deck.FXRunner'
+version = '1.1'
 
 compileJava.options.encoding = 'UTF-8'
 System.setProperty('file.encoding', 'UTF-8')
@@ -61,7 +61,7 @@ nativeBuild {
 }
 
 javafx {
-    version = '20'
+    version = '22'
     modules = ['javafx.base', 'javafx.controls', 'javafx.fxml', 'javafx.graphics']
 }
 

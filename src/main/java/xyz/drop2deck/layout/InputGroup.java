@@ -1,4 +1,4 @@
-package com.crazyxacker.apps.drop2deck.layout;
+package xyz.drop2deck.layout;
 
 import javafx.beans.InvalidationListener;
 import javafx.geometry.Pos;

@@ -1,10 +1,10 @@
-package com.crazyxacker.apps.drop2deck;
+package xyz.drop2deck;
 
-import com.crazyxacker.apps.drop2deck.enums.Platform;
-import com.crazyxacker.apps.drop2deck.jna.DwmAttribute;
-import com.crazyxacker.apps.drop2deck.jna.StageOps;
-import com.crazyxacker.apps.drop2deck.util.FXUtils;
-import com.crazyxacker.apps.drop2deck.util.PlatformUtils;
+import xyz.drop2deck.enums.Platform;
+import xyz.drop2deck.jna.DwmAttribute;
+import xyz.drop2deck.jna.StageOps;
+import xyz.drop2deck.util.FXUtils;
+import xyz.drop2deck.util.PlatformUtils;
 import javafx.application.Application;
 import javafx.application.HostServices;
 import javafx.scene.Parent;

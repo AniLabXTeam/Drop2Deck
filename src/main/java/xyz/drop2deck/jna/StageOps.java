@@ -1,4 +1,4 @@
-package com.crazyxacker.apps.drop2deck.jna;
+package xyz.drop2deck.jna;
 
 import com.sun.jna.Library;
 import com.sun.jna.Native;

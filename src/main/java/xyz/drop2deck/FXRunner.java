@@ -1,4 +1,4 @@
-package com.crazyxacker.apps.drop2deck;
+package xyz.drop2deck;
 
 import javafx.application.Application;
 

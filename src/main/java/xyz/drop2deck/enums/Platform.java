@@ -1,4 +1,4 @@
-package com.crazyxacker.apps.drop2deck.enums;
+package xyz.drop2deck.enums;
 
 public enum Platform {
     STEAM_DECK("/home", "/run/media/mmcblk0p1"),

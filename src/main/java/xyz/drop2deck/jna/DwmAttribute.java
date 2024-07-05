@@ -1,4 +1,4 @@
-package com.crazyxacker.apps.drop2deck.jna;
+package xyz.drop2deck.jna;
 
 /** Some DWM enum variants and constants. */
 public enum DwmAttribute {

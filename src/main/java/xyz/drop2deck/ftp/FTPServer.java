@@ -1,4 +1,4 @@
-package com.crazyxacker.apps.drop2deck.ftp;
+package xyz.drop2deck.ftp;
 
 import org.apache.ftpserver.FtpServer;
 import org.apache.ftpserver.FtpServerFactory;

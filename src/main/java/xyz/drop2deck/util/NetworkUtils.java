@@ -1,4 +1,4 @@
-package com.crazyxacker.apps.drop2deck.util;
+package xyz.drop2deck.util;
 
 import java.net.*;
 import java.util.*;

@@ -1,6 +1,6 @@
-package com.crazyxacker.apps.drop2deck.util;
+package xyz.drop2deck.util;
 
-import com.crazyxacker.apps.drop2deck.FXApplication;
+import xyz.drop2deck.FXApplication;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
