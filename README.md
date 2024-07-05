@@ -15,7 +15,7 @@ A: *Drop2Deck!*
 
 Very simple cross-platform `Java + JavaFX` application that creates `FTP servers` for both `Internal memory` and `MicroSD card` of your `Steam Deck`
 
-App can be used on `Windows`, `Linux` and `MacOS`, but designed with `Steam Deck` and `SteamOS` in mind. Also, it can be used on any `Windows` handhelds (eg, `AyaNeo`, `Asus ROG Ally`, etc.)
+App can be used on `Windows`, `Linux` and `macOS`, but designed with `Steam Deck` and `SteamOS` in mind. Also, it can be used on any `Windows` handhelds (eg, `AyaNeo`, `Asus ROG Ally`, etc.)
 
 You even can add app into `Gaming Mode` on your `Steam Deck` and transfer files without moving into `Desktop mode`!
 
@@ -27,7 +27,7 @@ You even can add app into `Gaming Mode` on your `Steam Deck` and transfer files 
 
 Install [Microsoft Visual C++ 2010 (x64)](https://www.microsoft.com/en-US/download/details.aspx?id=26999) and [Microsoft Visual C++ 2015 (x64)](https://www.microsoft.com/en-US/download/details.aspx?id=53840)
 
-#### Linux/MacOS
+#### Linux/macOS
 
 Additional libs are not required, but make sure to mark file as executable before use
 
@@ -65,7 +65,7 @@ Paths for supported systems are predefined:
 **Steam Deck**: `/home` and `/run/media/mmcblk0p1`  
 **Windows**: `C:\` and `D:\`  
 **Linux**: `/home` and `/mnt`  
-**MacOS**: `/Users` and `/Volumes`  
+**macOS**: `/Users` and `/Volumes`  
 
 #### Hidden files and directories
 
@@ -79,11 +79,11 @@ App will always select first Network interface with *lower IP*, get local `IP` a
 
 If you change `FTP Username` and want to delete old user, you will need to delete `users.properties` file that stored in app directory
 
-#### Build for MacOS
+#### Build for macOS
 
-App is cross-platform and can be launched in `MacOS` on regular `JDK 17+` with `JavaFX 20 SDK`, but it is designed to work as `Native app` that can be produced with `GraalVM Native image`. That neat feature requires some configuration before use  
+App is cross-platform and can be launched in `macOS` on regular `JDK 17+` with `JavaFX 20 SDK`, but it is designed to work as `Native app` that can be produced with `GraalVM Native image`. That neat feature requires some configuration before use  
 
-There is no that configuration and build for `MacOS`. But you can make it. Refer to `GraalVM Native Image` docs for info
+There is no that configuration and build for `macOS`. But you can make it. Refer to `GraalVM Native Image` docs for info
 
 ## Building
 
@@ -108,6 +108,10 @@ Follow [Windows instructions](https://www.graalvm.org/latest/docs/getting-starte
 #### Linux
 
 Follow [Linux instructions](https://www.graalvm.org/latest/docs/getting-started/linux/)
+
+#### macOS
+
+Follow [macOS instructions](https://www.graalvm.org/latest/docs/getting-started/macos/)
 
 ### Building
 
