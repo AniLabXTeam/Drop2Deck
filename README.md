@@ -118,17 +118,3 @@ Execute ```gradlew nativeBuild``` task. After success, binary file will be in `\
 #### Linux
 
 Rename `buildLinux.sh.example` into `buildLinux.sh` and fill required fields. Head into project dir and execute it. After success, binary file will be in `/build/gluonfx/x86_64-linux` folder
-
-### Packing (UPX'ing) binary
-
-You can produce smaller binary with `UPX`
-
-#### Windows
-
-**DON`T DO THAT. APP WILL NOT WORK**
-
-#### Linux
-
-Install latest version of `upx` and execute this command to pack binary: ```upx -9 -o {output_file_path} {input_file_path}```
-
-Produced binary will be ~2-3 times smaller than original one
